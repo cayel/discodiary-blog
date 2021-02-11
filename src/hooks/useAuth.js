@@ -20,7 +20,7 @@ const reducer = (state, action) => {
   }
 }
 
-const AuthContext = createContext()
+const AuthContext = createContext(DEFAULT_STATE)
 
 const AuthProvider = ({ children }) => (
   <AuthContext.Provider value={useReducer(reducer, DEFAULT_STATE)}>
@@ -37,7 +37,7 @@ export const wrapRootElement = ({ element }) => (
 const useAuth = () => {
   const [state, dispatcher] = useContext(AuthContext)
   const isAuthenticated = state.loggedIn && Object.keys(state.user).length
-  
+
   const login = (credentials) => new Promise(async (resolve, reject) => {
     try{
       console.log(`${apiURL}/auth/local`, credentials)
