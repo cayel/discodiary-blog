@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { navigate } from 'gatsby'
 import axios from 'axios'
 import useAuth from "../../hooks/useAuth"
 const apiURL = process.env.DISCODIARY_API_URL
@@ -46,7 +45,7 @@ const Listening = ({ redirect }) => {
     const handleSubmit = async (event) => {
         event.preventDefault()
         try{
-          const result = await saveListening(discogsId, score, state.jwt)
+          await saveListening(discogsId, score, state.jwt)
           setSuccess('Saved !')
         } catch(e) {
           console.log("Error occurred during saving")

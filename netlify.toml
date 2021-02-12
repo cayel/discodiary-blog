@@ -1,0 +1,2 @@
+[build.environment]
+DISCODIARY_API_URL=https://discodiary.herokuapp.com
