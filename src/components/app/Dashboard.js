@@ -6,7 +6,8 @@ const Dashboard = () => {
   const accessToken = state.jwt; 
   const [countAlbum, setCountAlbum] = useState(null);
   const [countListening, setCountListening] = useState(null);
-  const apiURL = `${process.env.DISCODIARY_API_URL}`
+  //const apiURL = `${process.env.DISCODIARY_API_URL}`
+  const apiURL = 'https://discodiary.herokuapp.com'
 
   useEffect(() => {
     var myHeaders = new Headers();
