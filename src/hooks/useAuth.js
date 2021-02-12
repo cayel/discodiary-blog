@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useReducer } from 'react'
 import axios from 'axios'
-const apiURL = process.env.DISCODIARY_API_URL
+const apiURL = `${process.env.DISCODIARY_API_URL}`
 
 const DEFAULT_STATE = {
   jwt: null,

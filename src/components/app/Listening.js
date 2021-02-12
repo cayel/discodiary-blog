@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import axios from 'axios'
 import useAuth from "../../hooks/useAuth"
-const apiURL = process.env.DISCODIARY_API_URL
+const apiURL = `${process.env.DISCODIARY_API_URL}`
 
 
 async function saveListening(discogsId, score, token) {
